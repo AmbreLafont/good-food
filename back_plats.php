@@ -29,7 +29,7 @@ Vous réservez un carton d’invitation valable 1 an et/ou choisissez votre Chef
                 
                 <?php
 
-                if (($entree = fopen("../../csv/entree.csv", "r")) != FALSE) {
+                if (($entree = fopen("../../csv/plats/entree.csv", "r")) != FALSE) {
                     //Tant que ça fait -2500 caractères et termes séparés par ,   
 
                     while (($data = fgetcsv($entree, 2500, ",")) != FALSE) {
@@ -44,7 +44,7 @@ Vous réservez un carton d’invitation valable 1 an et/ou choisissez votre Chef
                                     break;
                                 //image
                                 case 1:
-                                    echo "<img src='../../images/Plats/".$data[$i]."'/>";
+                                    echo "<img src='../../images/plats/".$data[$i]."'/>";
                                     break;
                                 //description
                                 case 2:
